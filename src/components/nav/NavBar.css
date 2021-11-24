@@ -20,7 +20,7 @@
   position: relative;
   z-index: 0;
   font-family: "Bungee";
-  font-size: 1.8em;
+  font-size: 1.3em;
   }
   
   .navbar__link:hover {
@@ -86,7 +86,7 @@ h1 {
     margin: 2%;
     text-transform: uppercase;
     font-family: verdana;
-    font-size: 35px;
+    font-size: 39px;
     font-weight: 700;
     color: #fba4a4;
     text-shadow: 1px 1px 1px #919191,
@@ -103,4 +103,16 @@ h1 {
     1px 22px 10px rgba(16,16,16,0.2),
     1px 25px 35px rgba(16,16,16,0.2),
     1px 30px 60px rgba(16,16,16,0.4);
+}
+
+.nav--header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav--header img {
+  width: 150px;
+  margin-right: 2%;
+  margin-top: 1%;
 }

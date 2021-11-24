@@ -1,6 +1,6 @@
 import { useHistory } from "react-router"
-
-export const Purchases = ({productLocationId}) => {
+//? Leah showed me this but im not sure whats its doing exactly? From the productLocations module.
+export const Purchases = ({ productLocationId }) => {
     const history = useHistory()
 
     const SubmitPurchase = (event) => {

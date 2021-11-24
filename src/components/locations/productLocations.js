@@ -2,7 +2,6 @@ import { useEffect } from "react"
 import { useParams } from "react-router"
 import { useState } from "react/cjs/react.development"
 import { Purchases } from "../products/purchase"
-
 export const ProductLocations = () => {
     const [productLocations, modifyProductLocations] = useState([])
     const { locationId } = useParams()
@@ -15,6 +14,7 @@ export const ProductLocations = () => {
                 modifyProductLocations
             )
         },
+        //? How do you know when to use the dependancy array? I cant tell when its going to be an infinite loop or if i need it for the page to render correctly. 
         [locationId]
     )
     return (

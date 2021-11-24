@@ -1,5 +1,6 @@
 import { useEffect, useState  } from "react"
 import { useHistory } from "react-router"
+import { GetEmployees } from "../ApiManager"
 import "./employees.css"
 
 export const Employees = () => {
@@ -8,11 +9,8 @@ export const Employees = () => {
 
     useEffect(
         () => {
-            fetch("http://localhost:8088/employees")
-            .then(res => res.json())
-            .then((employeesArray) => {
-                modifyEmployees(employeesArray)
-            })
+            GetEmployees()
+            .then(modifyEmployees)
         },
         []
     )
@@ -21,11 +19,8 @@ export const Employees = () => {
             method: "DELETE"
         })
         .then (() => {
-            fetch("http://localhost:8088/employees")
-            .then(res => res.json())
-            .then((employeesArray) => {
-                modifyEmployees(employeesArray)
-            })}
+            GetEmployees()
+            .then(modifyEmployees)}
         )
     }
     return (

@@ -2,12 +2,14 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
+import candy from "../../img/candy.png"
 
 export const NavBar = () => {
     return (
         <>
-        <div>
+        <div className="nav--header">
         <h1>Kandy Korner</h1>
+        <img src={candy}/>
         </div>
         <ul className="navbar">
             <li className="navbar__item active">
